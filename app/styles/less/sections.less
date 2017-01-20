@@ -229,11 +229,11 @@ md-toolbar.md-tall{
     }
 }
 
-#eventInfo{
+#eventInfo, #eventCheckin, #eventCheckinReport{
     md-toolbar{
         .md-toolbar-tools{
             position:relative;
-            height: auto;
+            height: 64px;
             max-height: none;
             h1{
                 margin-left: 5px;
@@ -243,12 +243,39 @@ md-toolbar.md-tall{
         .fa-chevron-left{position:relative; top:-2px; left:-2px;}
         .fa-calendar{font-size:24px;}
     }
+    .face{margin-right:5px;}
+}
+
+#eventCheckin, #eventCheckinReport{
+    table{
+        width: 200px;
+        margin: 0px;
+        td{
+            width: 100%;
+            display: block;
+        }
+        @media (min-width:530px){
+            width: 400px;
+            td{
+                width: 200px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
 }
 
 #eventCheckin{
-    md-toolbar{padding-bottom:25px;}
-    md-content{padding-top:25px;}
-    .face{margin-right:5px;}
+    md-list-item > div:last-child{
+            width: 45px;
+    }
+}
+
+#eventCheckinReport{
+    md-list-item:not(:last-child){margin-bottom:8px;}
+    #missedCheckin > div{
+        display: inline-block;
+    }
 }
 
 #links{

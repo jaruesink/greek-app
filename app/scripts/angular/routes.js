@@ -293,7 +293,7 @@ angular.module("App").config(function($stateProvider, $urlRouterProvider) {
             .state('app.events.eventCheckin',{
                     url : '/:tag/checkin',
                     templateUrl : 'views/eventcheckin.html',
-                    controller : 'eventCheckInController',
+                    controller : 'eventCheckInController as checkIn',
                     data: {
                         permissions: {
                             only: [LEADERSHIP],
@@ -305,7 +305,7 @@ angular.module("App").config(function($stateProvider, $urlRouterProvider) {
                 //#TODO put this into each individual event :tag
                     url : '/:tag/report',
                     templateUrl : 'views/eventcheckinreport.html',
-                    controller : 'eventCheckInReportController',
+                    controller : 'eventCheckInReportController as checkInReport',
                     data: {
                         permissions: {
                             only: [LEADERSHIP],
